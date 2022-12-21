@@ -5,22 +5,22 @@
 class Swiss < Formula
   desc "Swiss army knife for Developer's daily basis tools e.g. Base64 encode/decode, password generator"
   homepage "https://github.com/huseyinbabal/swiss"
-  version "0.0.1-rc.4"
+  version "0.0.1-rc.5"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/swiss/releases/download/0.0.1-rc.4/swiss_0.0.1-rc.4_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8d4abd50c5238d34b054db7f19b636f42e1ad1d88044eb9d9458d9ebf8396725"
+      url "https://github.com/huseyinbabal/swiss/releases/download/0.0.1-rc.5/swiss_0.0.1-rc.5_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f618a3e5e903626095b5a95ec200e38f9b0ecfbf0f14acb73abb49345b6492b2"
 
       def install
         bin.install "swiss"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/swiss/releases/download/0.0.1-rc.4/swiss_0.0.1-rc.4_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c29e7c205444359d75ec745935685dc3f44fb6c099d98fe0ad0bffc188aa435e"
+      url "https://github.com/huseyinbabal/swiss/releases/download/0.0.1-rc.5/swiss_0.0.1-rc.5_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8df16cf9384e40c07c3275918c48de1a75b33590684a22798f679524f2a221a4"
 
       def install
         bin.install "swiss"
