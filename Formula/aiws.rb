@@ -5,22 +5,22 @@
 class Aiws < Formula
   desc "AI-driven AWS CLI for Developer's. Never memorize AWS CLI commands again."
   homepage "https://github.com/huseyinbabal/aiws"
-  version "0.0.1-rc.5"
+  version "0.0.1-rc.6"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.5/aiws_0.0.1-rc.5_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c1d7cc3a662b094f615f6939db057b0e3681e1eba13372bb6b0a199dac23e8d5"
+      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.6/aiws_0.0.1-rc.6_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5fe42efbd6682aeca5da09dbd90f8b66549da59ba6f48406742d0cd65fbb0b64"
 
       def install
         bin.install "aiws"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.5/aiws_0.0.1-rc.5_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "88fa04e8c21dc3b455e0e36b0e9ce39f53789e8be0683c1f801fb4e09cb747d7"
+      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.6/aiws_0.0.1-rc.6_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1f7118230900e049131c3ea70cd8d397d64941735cf7b178606cf292ee9425fd"
 
       def install
         bin.install "aiws"
