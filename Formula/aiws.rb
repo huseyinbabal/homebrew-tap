@@ -5,22 +5,40 @@
 class Aiws < Formula
   desc "AI-driven AWS CLI for Developer's. Never memorize AWS CLI commands again."
   homepage "https://github.com/huseyinbabal/aiws"
-  version "0.0.1-rc.6"
+  version "0.0.1-rc.8"
   license "MIT"
-  depends_on :macos
 
   on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.8/aiws_0.0.1-rc.8_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5de81ca26419973f1b43d294a831d16cefdcc3f633eb998e370e7cddc230b487"
+
+      def install
+        bin.install "aiws"
+      end
+    end
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.6/aiws_0.0.1-rc.6_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5fe42efbd6682aeca5da09dbd90f8b66549da59ba6f48406742d0cd65fbb0b64"
+      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.8/aiws_0.0.1-rc.8_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "05f316e05a433baeeb07ac3110b51f5fe8ffca446bdf9266f48d85d34f4cf0ab"
+
+      def install
+        bin.install "aiws"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.8/aiws_0.0.1-rc.8_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "cf8804be0f01bb14786f1160bca9fa724f5b5f955dd21f6d84312c8e7b59d422"
 
       def install
         bin.install "aiws"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.6/aiws_0.0.1-rc.6_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "1f7118230900e049131c3ea70cd8d397d64941735cf7b178606cf292ee9425fd"
+      url "https://github.com/huseyinbabal/aiws/releases/download/0.0.1-rc.8/aiws_0.0.1-rc.8_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "b7f401ed0051ea061d7719b830e77add6f37392607e6a999db0f8d5935b2f3bb"
 
       def install
         bin.install "aiws"
