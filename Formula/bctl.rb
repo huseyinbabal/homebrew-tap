@@ -5,43 +5,43 @@
 class Bctl < Formula
   desc "BotKube CLI is a command line tool that helps you migrate your Botkube installation to Botkube Cloud."
   homepage "https://botkube.io"
-  version "0.0.0-rc.10"
+  version "0.0.0-rc.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.10/botkube_0.0.0-rc.10_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "087aef5e8cd2aee2384ceb4d2043bbaad6a0d5272cdaa6a1988be40142aed7a4"
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.11/botkube_0.0.0-rc.11_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6cbd473d381d9cd572d3b0996366eb05c8b3be9921f23c72d5b9c105a5364d99"
 
       def install
-        bin.install "botkube"
+        bin.install "bctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.10/botkube_0.0.0-rc.10_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "41eac7c22c5c24e7a5de5d10da423a52e7151df3d93917459c3484cb83b87615"
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.11/botkube_0.0.0-rc.11_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e97fc18c5b3b61de3a328497353a73badd1815fbc6ab86936e4b4356430485a3"
 
       def install
-        bin.install "botkube"
+        bin.install "bctl"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.10/botkube_0.0.0-rc.10_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2d10883b4bfc860078187b4c1ea16a13308878dc6e62833e1de7feefce0ac31a"
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.11/botkube_0.0.0-rc.11_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "899d5d29607c57f1732a0c8a79d1dec5d89f696495eb540aed815d02763fa371"
 
       def install
-        bin.install "botkube"
+        bin.install "bctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.10/botkube_0.0.0-rc.10_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0389e1dd302400408340cc31bf6028c7cbab429ea78d5cca714cb48732d66f06"
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.11/botkube_0.0.0-rc.11_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c01d319a482640f7b12f3021bd6e8c35920b7669ab6c43331a6998745af5fc88"
 
       def install
-        bin.install "botkube"
+        bin.install "bctl"
       end
     end
   end
