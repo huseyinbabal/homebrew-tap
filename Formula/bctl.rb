@@ -5,22 +5,40 @@
 class Bctl < Formula
   desc "BotKube CLI is a command line tool that helps you migrate your Botkube installation to Botkube Cloud."
   homepage "https://botkube.io"
-  version "0.0.0-rc.8"
+  version "0.0.0-rc.9"
   license "MIT"
-  depends_on :linux
 
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.8/botkube_0.0.0-rc.8_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cfadba44cbae35d0eab4ac655dbf06410892c81a1c9e612070af7ead5971d730"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.9/botkube_0.0.0-rc.9_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "b24aaaa10d301ff87ff6b3997a357e2e22304664d4b9bd5e95144b24f6a3b4dd"
 
       def install
         bin.install "botkube-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.8/botkube_0.0.0-rc.8_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0fc40341be3e8333d99698be432636ada983ab97b98a146624bdb6c7085b6904"
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.9/botkube_0.0.0-rc.9_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "611f268f49fb267d9677a926e620287a0e83e5faadf29bcd7011dac73a74ac3b"
+
+      def install
+        bin.install "botkube-cli"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.9/botkube_0.0.0-rc.9_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "d7d0af45756f307bef90eaa0533fedb1f7744a93f7d1efa4f5cf500fef713166"
+
+      def install
+        bin.install "botkube-cli"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.9/botkube_0.0.0-rc.9_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c67d1ab2287385bb7a5ffeecfd42d569175b159781467d67c3dc27f47e52305d"
 
       def install
         bin.install "botkube-cli"
