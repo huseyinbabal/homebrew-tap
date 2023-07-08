@@ -5,25 +5,25 @@
 class Bctl < Formula
   desc "BotKube CLI is a command line tool that helps you migrate your Botkube installation to Botkube Cloud."
   homepage "https://botkube.io"
-  version "0.0.0-rc.7"
+  version "0.0.0-rc.8"
   license "MIT"
   depends_on :linux
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.7/botkube_0.0.0-rc.7_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "284cc8bc98e89e2184184479a7c33da4b067f0c0ee3ba7d9990d89fefd2f1b7f"
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.8/botkube_0.0.0-rc.8_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "cfadba44cbae35d0eab4ac655dbf06410892c81a1c9e612070af7ead5971d730"
 
       def install
-        bin.install "botkube"
+        bin.install "botkube-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.7/botkube_0.0.0-rc.7_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ae6d120416169125921e8383c103385fe47d2ffd1dcb958562487426946b52cb"
+      url "https://github.com/huseyinbabal/botkube/releases/download/v0.0.0-rc.8/botkube_0.0.0-rc.8_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0fc40341be3e8333d99698be432636ada983ab97b98a146624bdb6c7085b6904"
 
       def install
-        bin.install "botkube"
+        bin.install "botkube-cli"
       end
     end
   end
