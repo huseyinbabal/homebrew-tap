@@ -4,28 +4,28 @@
 class Tgcp < Formula
   desc "Terminal UI for GCP"
   homepage "https://github.com/huseyinbabal/tgcp"
-  version "1.0.0-rc.2"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/tgcp/releases/download/v1.0.0-rc.2/tgcp-aarch64-apple-darwin.tar.gz"
-      sha256 "552a91379c6635c5883dbfda87d033d61b299c4995906953463dd2b81382818c"
+      url "https://github.com/huseyinbabal/tgcp/releases/download/v1.0.0/tgcp-aarch64-apple-darwin.tar.gz"
+      sha256 "ebf46bc966995d6d55c78c2befc47015b5b26cea68d83a0871edb21d1bfe21f2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/tgcp/releases/download/v1.0.0-rc.2/tgcp-x86_64-apple-darwin.tar.gz"
-      sha256 "2f2914b9d21f8a5486c83926a1b5cdf6e5fb4cb9c6ca5b8dd159801a86cf14ec"
+      url "https://github.com/huseyinbabal/tgcp/releases/download/v1.0.0/tgcp-x86_64-apple-darwin.tar.gz"
+      sha256 "d98565105dcf82ab669de2151bff69793e26f38740479b3d02fd449e599b4033"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/tgcp/releases/download/v1.0.0-rc.2/tgcp-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ad47f5041908b0a1f7d1480aa5a07adc4c0e25bc93c9d6a627d223685be47780"
+      url "https://github.com/huseyinbabal/tgcp/releases/download/v1.0.0/tgcp-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "65a82f98b15a77b7ab155c94c28f762e0cdebc0e4370621bbc009fb8fa30ab13"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/tgcp/releases/download/v1.0.0-rc.2/tgcp-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a9ba171f574a1fb3aa1f00cf45d93925570277335fe1781b6e305528254333f9"
+      url "https://github.com/huseyinbabal/tgcp/releases/download/v1.0.0/tgcp-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "13ff6b1847bf034bdd680089e0b0f143c251b25293a05681a836a2484851aaa9"
     end
   end
 
