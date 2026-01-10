@@ -10,22 +10,22 @@ class Tredis < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/huseyinbabal/tredis/releases/download/v/tredis-aarch64-apple-darwin.tar.gz"
-      sha256 "c485d5decadbe24ecb171545907281be6b390f5d4c88f92bea9c9f6656731c14"
+      sha256 "7606d65ba93608dbd9a937a15b6b95b988bf0ef25d704a501b50b25915075c7e"
     end
     if Hardware::CPU.intel?
       url "https://github.com/huseyinbabal/tredis/releases/download/v/tredis-x86_64-apple-darwin.tar.gz"
-      sha256 "82bce6581ab4f563f5c455f33da9b2e1c201b565f4cdcb533f93fce3d6d6949d"
+      sha256 "89b8c403a5ab160ce9975172e49cfdc72757398d8a8d5c808a4ab59cad14880e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/huseyinbabal/tredis/releases/download/v/tredis-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "6a0ba85fb0d52a2e856c2118a414c3c37a34b190a8080843c88ca7aa385013db"
+      sha256 "5d77ece33b53797e9bf022f211609c3b0d8e0567824cb253bd26effd08334cf1"
     end
     if Hardware::CPU.intel?
       url "https://github.com/huseyinbabal/tredis/releases/download/v/tredis-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "fedd75d6dbe2181de0f9c45c5da626300e212ddf9e4f5b26f4bd8feae4f6d2e5"
+      sha256 "b2eb7b09545bdb79a6948b6d2efaac12b426930a6be43af6048da1db95e7c52e"
     end
   end
 
