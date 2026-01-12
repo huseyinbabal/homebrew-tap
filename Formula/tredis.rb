@@ -4,28 +4,28 @@
 class Tredis < Formula
   desc "Terminal UI for Redis"
   homepage "https://github.com/huseyinbabal/tredis"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/tredis/releases/download/v1.1.0/tredis-aarch64-apple-darwin.tar.gz"
-      sha256 "8d4335b5ab4414d312f1bf675d77ff0e2f3e5a2b018723899437674409ae4048"
+      url "https://github.com/huseyinbabal/tredis/releases/download/v1.1.1/tredis-aarch64-apple-darwin.tar.gz"
+      sha256 "a4692e3884d603fe18710bc239e178ecf09c27c45c7cc75793d0e104b9b040a4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/tredis/releases/download/v1.1.0/tredis-x86_64-apple-darwin.tar.gz"
-      sha256 "db1cdaa1d7424ef592fdc186e885b448693e5983ea8a0f1bbf756e6f8a9234a7"
+      url "https://github.com/huseyinbabal/tredis/releases/download/v1.1.1/tredis-x86_64-apple-darwin.tar.gz"
+      sha256 "d77171e6a8e37d326cc059417335a828ed42aeb1a9b4292be128af5de146b83d"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/tredis/releases/download/v1.1.0/tredis-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "38f9d0b217be9904e08380a9cb5d1965759c1bf152f873bc4e0a4425e6d1010b"
+      url "https://github.com/huseyinbabal/tredis/releases/download/v1.1.1/tredis-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "ac4274a938ec0afab789173e43bfd29c86bcdf0639f8823522ff1edc3200dfb5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/tredis/releases/download/v1.1.0/tredis-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "aefc51c1b26a9e9779575751a73eab64068cce9e8d95c895761eff1cc8e4adfd"
+      url "https://github.com/huseyinbabal/tredis/releases/download/v1.1.1/tredis-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "21f0b008a347ce39159f8ea017c0c95161c523807dd8b4dff1fed45152b0e409"
     end
   end
 
