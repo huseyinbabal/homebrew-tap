@@ -4,28 +4,28 @@
 class Taws < Formula
   desc "Terminal UI for AWS"
   homepage "https://github.com/huseyinbabal/taws"
-  version "1.1.7"
+  version "1.2.0-rc.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/taws/releases/download/v1.1.7/taws-aarch64-apple-darwin.tar.gz"
-      sha256 "4a7c3454ca7997d17ec1e6ecaa3df93bb647af95ace7843325dfd33473789724"
+      url "https://github.com/huseyinbabal/taws/releases/download/v1.2.0-rc.1/taws-aarch64-apple-darwin.tar.gz"
+      sha256 "ce3684b87a7ad1681a6d99f1710681a44a96c586766637275225e28c23e93253"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/taws/releases/download/v1.1.7/taws-x86_64-apple-darwin.tar.gz"
-      sha256 "d4b040a599d637134824a04275bf042c8d41233f6e0609ab59189bf0dacfd5c4"
+      url "https://github.com/huseyinbabal/taws/releases/download/v1.2.0-rc.1/taws-x86_64-apple-darwin.tar.gz"
+      sha256 "4ead23ccac75a500b797056bb972407369f085ec80d3422f7f3173c2a3df6c60"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/taws/releases/download/v1.1.7/taws-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "3bf28b88318f20317beb78d7d3f7be8042759a09ba98116d54c7db88f675e5c0"
+      url "https://github.com/huseyinbabal/taws/releases/download/v1.2.0-rc.1/taws-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "7d0dabc5ecd47503a7164aca9a2886e09133b7461ae90775e4e1c3913f93f458"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/taws/releases/download/v1.1.7/taws-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6b43bff6065f28b048259f48c7b72e37758c55e7dbe692da672dca1c598c9682"
+      url "https://github.com/huseyinbabal/taws/releases/download/v1.2.0-rc.1/taws-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "640aae5de1508a96e08062c15ad4dec33a6783c8c528617ec5f634b7deb0b962"
     end
   end
 
