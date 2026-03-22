@@ -4,28 +4,28 @@
 class Laws < Formula
   desc "Local AWS - a lightweight, fast AWS emulator written in Rust"
   homepage "https://github.com/huseyinbabal/laws"
-  version "1.0.0-rc.1"
+  version "1.0.0-rc.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/laws/releases/download/v1.0.0-rc.1/laws-aarch64-apple-darwin.tar.gz"
-      sha256 "a26de08e28d4e655a9c0a0cba5752842b7b2a8bd3e7f8ed5a503ba4499098a58"
+      url "https://github.com/huseyinbabal/laws/releases/download/v1.0.0-rc.2/laws-aarch64-apple-darwin.tar.gz"
+      sha256 "e92d471119b540a185fc11a51aaa2961ee2b9fee0a7a1604e784e316d0270e8f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/laws/releases/download/v1.0.0-rc.1/laws-x86_64-apple-darwin.tar.gz"
-      sha256 "d24ff5c86cd030981873c3ba3d68d04d3d7bb85f0d98657c7c8df895aa78ace2"
+      url "https://github.com/huseyinbabal/laws/releases/download/v1.0.0-rc.2/laws-x86_64-apple-darwin.tar.gz"
+      sha256 "715b2e20caf091bde5dd0b45452f3b4ad00f548641a65be7aa51c43acefa33fc"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/laws/releases/download/v1.0.0-rc.1/laws-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "e04bc946df43edbe4860c96a3247c2b8b3990e11a6659e422b58dd34f3ab3549"
+      url "https://github.com/huseyinbabal/laws/releases/download/v1.0.0-rc.2/laws-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "324b55cc21a83f8e5cbed8159709fa5db8475ba0fb6a0b4765ddac26cc48f563"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/laws/releases/download/v1.0.0-rc.1/laws-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "5277e7a099b73312ef798156112f062db45ed6b363e9a9019318aa4f6b32ddf3"
+      url "https://github.com/huseyinbabal/laws/releases/download/v1.0.0-rc.2/laws-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "9aa96416c95bdbd6336862e5e0c7d78922912d90646eb6895e5d475962d0ff3a"
     end
   end
 
