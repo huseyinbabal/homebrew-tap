@@ -4,28 +4,28 @@
 class Tsb < Formula
   desc "Terminal UI for Spring Boot - A modern TUI for managing Spring Boot applications"
   homepage "https://github.com/huseyinbabal/tsb"
-  version "1.0.0-rc.2"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0-rc.2/tsb-aarch64-apple-darwin.tar.gz"
-      sha256 "0563420574eedfa547d6360374e16ff289d52dabc8f24b2f5fb61a0f27e528d0"
+      url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0/tsb-aarch64-apple-darwin.tar.gz"
+      sha256 "995d25e1a46da9aa571e405514e2f5b70ea84b9caef9f534f9909604f2f6889e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0-rc.2/tsb-x86_64-apple-darwin.tar.gz"
-      sha256 "8125333a25af104c3b47fc2d97b89a29b504d93578ad0e7d8f6e721cc0a56473"
+      url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0/tsb-x86_64-apple-darwin.tar.gz"
+      sha256 "07f5ee1e4317d67bd63dadc0c3a4fefebd335fc4a9f6e472afcdbe07caa23287"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0-rc.2/tsb-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "295df295ad4d3768ba5cd60d05168a20f5e23b644387aafd9713f728eab570b9"
+      url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0/tsb-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "3e1023d0af688e6b2cbe3e10554dacff4389fdcbbfc05a308c7e69f19d6b18be"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0-rc.2/tsb-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "31159da523195ed01a849c3f0a8df292dfba3b2e7de0a40a2e84b347cc791050"
+      url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0/tsb-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "a7fcb310a12e8a1dc21a09b1c9d7cc828f5fd6b88e033370c3cd712b695960e9"
     end
   end
 
