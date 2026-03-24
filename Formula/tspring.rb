@@ -10,22 +10,22 @@ class Tspring < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0/tspring-aarch64-apple-darwin.tar.gz"
-      sha256 "12520595883427b6642376c2ffdfa412e922391be0addc3466f566f024ea49d9"
+      sha256 "405e7c81d067c63c7ad3cf58e33680267d7d219834816b32236397242d8d1dc3"
     end
     if Hardware::CPU.intel?
       url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0/tspring-x86_64-apple-darwin.tar.gz"
-      sha256 "ecdae3b7b88927ba65f3d26a8476da46db65717b6f9e46ebc572dfaa98c6c571"
+      sha256 "e8cd01d2da225d51fdee347401da31b1f14fcf2de8308a2627081492c7e878db"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0/tspring-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "6286674c5176730ac9379be919d06e4f0a9a72ccb8175b5585fed82d19b6511e"
+      sha256 "c7ba7d67b03bafe8a69deb669fb71e7d2dca058b26bee1e170040237199f230e"
     end
     if Hardware::CPU.intel?
       url "https://github.com/huseyinbabal/tsb/releases/download/v1.0.0/tspring-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "e7c66b5cad9e1b43256bae0011002064e101a4160507cd3ede78c8964f39b350"
+      sha256 "d652e504827f8a1c0c21fc3c79100357370de8be03fb1f218466b34176281c11"
     end
   end
 
