@@ -4,28 +4,28 @@
 class Portkube < Formula
   desc "Access Kubernetes services from localhost by their DNS names"
   homepage "https://github.com/huseyinbabal/portkube"
-  version "1.0.1"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/portkube/releases/download/v1.0.1/portkube-aarch64-apple-darwin.tar.gz"
-      sha256 "9ba97076c903fa12ef9bac26bc85838e22a773879b78fab393090bc86b4749f4"
+      url "https://github.com/huseyinbabal/portkube/releases/download/v1.1.0/portkube-aarch64-apple-darwin.tar.gz"
+      sha256 "1e43e70d3f4140c5dad0e140df6593d980a44281557ac0915216222bfdb7a2c8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/portkube/releases/download/v1.0.1/portkube-x86_64-apple-darwin.tar.gz"
-      sha256 "98df11d143b72437890a6a8c9a08c906d8082d6bc6e076365260bc7967feb6fe"
+      url "https://github.com/huseyinbabal/portkube/releases/download/v1.1.0/portkube-x86_64-apple-darwin.tar.gz"
+      sha256 "8dae92fdd0e72ed4650d18bcd90c1e3bb3b767aa7c30280b98c1919743f94d6f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/portkube/releases/download/v1.0.1/portkube-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "daab78573f92d997b7b0768f34990bd1c505faa295fbbc0e69a9228c125c4257"
+      url "https://github.com/huseyinbabal/portkube/releases/download/v1.1.0/portkube-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "fd0948026f04f80a2a0023f0b141d24ca34a92a40455681de8f1db2f9db19ea3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/portkube/releases/download/v1.0.1/portkube-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "e864ecb747c9185129bf321bdebd2512a649c24eb483b335b76ec2384b263fb5"
+      url "https://github.com/huseyinbabal/portkube/releases/download/v1.1.0/portkube-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "986c2a4f9f99ebe78a22c174c7e4a39e3121734f01e8177685974e13a86a70c7"
     end
   end
 
