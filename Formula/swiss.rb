@@ -11,7 +11,7 @@ class Swiss < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/huseyinbabal/swiss/releases/download/0.0.1/swiss_0.0.1_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "738b405b4aa148ef6b1dff856b71b50f96c555df618c0e7f054b4fc083ec0740"
+      sha256 "1431dcdc82e36cf6a616925eb7f587f3d354a4fb594202a15d96b257b1900941"
 
       define_method(:install) do
         bin.install "swiss"
@@ -19,7 +19,7 @@ class Swiss < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/huseyinbabal/swiss/releases/download/0.0.1/swiss_0.0.1_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8b5d7972570508c5d09b27bdf796049716da0eaada6bc5fb6dbd1b9b5087adea"
+      sha256 "90c9c150f917b500052db3caaf87273bcfaae5f4cdecec6388e995f09b65752e"
 
       define_method(:install) do
         bin.install "swiss"
@@ -30,16 +30,14 @@ class Swiss < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/huseyinbabal/swiss/releases/download/0.0.1/swiss_0.0.1_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "62676b2519574c7d9dcee6782250616272030fc37e5e53fd529887c6b71e4bab"
-
+      sha256 "83adebbafc2ac29b9d6bbbdcdc96d2ec2997f770dfebfc66748ae6cc1263f075"
       define_method(:install) do
         bin.install "swiss"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/huseyinbabal/swiss/releases/download/0.0.1/swiss_0.0.1_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "585828916ebdeeebb5eb496bda2258429dd1ad2a94815799bc5dfa45603ce889"
-
+      sha256 "fc7d4038aed1a214e75d44d5ac4aa54b9b29941aa52dbc6730b85166b1358834"
       define_method(:install) do
         bin.install "swiss"
       end
