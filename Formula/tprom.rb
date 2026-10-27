@@ -4,28 +4,28 @@
 class Tprom < Formula
   desc "Terminal UI for Prometheus"
   homepage "https://github.com/huseyinbabal/tprom"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/huseyinbabal/tprom/releases/download/v0.1.0/tprom-aarch64-apple-darwin.tar.gz"
-      sha256 "454e533b7d015b6eac7a2acffa5c58419ef782927b2ce3c9f315fedd2d1c5f67"
+      url "https://github.com/huseyinbabal/tprom/releases/download/v0.2.0/tprom-aarch64-apple-darwin.tar.gz"
+      sha256 "e6ffd1da1033a67e2251eec3b749d553f5470192fe16ed3475cb8c177a18c047"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/tprom/releases/download/v0.1.0/tprom-x86_64-apple-darwin.tar.gz"
-      sha256 "1b6b3cdb2da4d0f526146154a018b7e61d4e35d83f6a08573ce06373c148ea7c"
+      url "https://github.com/huseyinbabal/tprom/releases/download/v0.2.0/tprom-x86_64-apple-darwin.tar.gz"
+      sha256 "f67d09d0aeac2d9837d56d0f591609b2e198e221fccf25b9d9225639be57da9d"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/huseyinbabal/tprom/releases/download/v0.1.0/tprom-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "b20256f6b7d848c813ad38657e0fc32682360e54a862ae9c51eb8710b124eb04"
+      url "https://github.com/huseyinbabal/tprom/releases/download/v0.2.0/tprom-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "3adf04021f9dc973bfb0a76fba6441380ccc23a62ff0b4e15235d0a01625c843"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/huseyinbabal/tprom/releases/download/v0.1.0/tprom-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6ffd5fac7a7c9b7765302e0265182e482246b0cc9a591f705713b9226be9a7dd"
+      url "https://github.com/huseyinbabal/tprom/releases/download/v0.2.0/tprom-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "d55e88e458cd1a75e6a32a45362a684510c7245619a284a3879a058fb7c960d2"
     end
   end
 
